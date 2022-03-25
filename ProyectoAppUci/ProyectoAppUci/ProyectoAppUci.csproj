@@ -1,0 +1,297 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{F20749CE-6411-4605-A5A9-C6949519AD10}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>ProyectoAppUci</RootNamespace>
+    <AssemblyName>ProyectoAppUci</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Controlador\GestorCarrera.cs" />
+    <Compile Include="Controlador\GestorCategoriaCarrera.cs" />
+    <Compile Include="Controlador\GestorCategoriaEquipo.cs" />
+    <Compile Include="Controlador\GestorCategoriaEquipoEquipo.cs" />
+    <Compile Include="Controlador\GestorCategoriaPuerto.cs" />
+    <Compile Include="Controlador\GestorCiclista.cs" />
+    <Compile Include="Controlador\GestorCiclistaEquipo.cs" />
+    <Compile Include="Controlador\GestorConexion.cs" />
+    <Compile Include="Controlador\GestorDirector.cs" />
+    <Compile Include="Controlador\GestorDirectorEquipo.cs" />
+    <Compile Include="Controlador\GestorEquipo.cs" />
+    <Compile Include="Controlador\GestorEtapa.cs" />
+    <Compile Include="Controlador\GestorPais.cs" />
+    <Compile Include="Controlador\GestorPremio.cs" />
+    <Compile Include="Controlador\GestorPremioCarrera.cs" />
+    <Compile Include="Controlador\GestorPuerto.cs" />
+    <Compile Include="Controlador\GestorPuertoEtapa.cs" />
+    <Compile Include="Controlador\GestorResultadoEtapa.cs" />
+    <Compile Include="Controlador\GestorTipoEtapa.cs" />
+    <Compile Include="Dto\CarreraDto.cs" />
+    <Compile Include="Dto\CatEqEqDto.cs" />
+    <Compile Include="Dto\CiclistaDto.cs" />
+    <Compile Include="Dto\CiclistaEquipoDto.cs" />
+    <Compile Include="Dto\DirectorDto.cs" />
+    <Compile Include="Dto\DirectorEquipoDto.cs" />
+    <Compile Include="Dto\EquipoDto.cs" />
+    <Compile Include="Dto\EtapaDto.cs" />
+    <Compile Include="Dto\PaisDto.cs" />
+    <Compile Include="Dto\PremioCarreraDto.cs" />
+    <Compile Include="Dto\PuertoDto.cs" />
+    <Compile Include="Dto\PuertoEtapaDto.cs" />
+    <Compile Include="Dto\ResEtaDto.cs" />
+    <Compile Include="Dto\ResultadoEtapaDto.cs" />
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\Carrera.cs" />
+    <Compile Include="Modelo\CategoriaCarrera.cs" />
+    <Compile Include="Modelo\CategoriaEquipo.cs" />
+    <Compile Include="Modelo\CategoriaEquipoEquipo.cs" />
+    <Compile Include="Modelo\CategoriaPuerto.cs" />
+    <Compile Include="Modelo\Ciclista.cs" />
+    <Compile Include="Modelo\CiclistaEquipo.cs" />
+    <Compile Include="Modelo\Director.cs" />
+    <Compile Include="Modelo\DirectorEquipo.cs" />
+    <Compile Include="Modelo\Equipo.cs" />
+    <Compile Include="Modelo\Etapa.cs" />
+    <Compile Include="Modelo\Pais.cs" />
+    <Compile Include="Modelo\Premio.cs" />
+    <Compile Include="Modelo\PremioCarrera.cs" />
+    <Compile Include="Modelo\Puerto.cs" />
+    <Compile Include="Modelo\PuertoEtapa.cs" />
+    <Compile Include="Modelo\ResultadoEtapa.cs" />
+    <Compile Include="Modelo\TipoEtapa.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Vista\VentanaCategoriaEquipoEquipo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\VentanaCategoriaEquipoEquipo.Designer.cs">
+      <DependentUpon>VentanaCategoriaEquipoEquipo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\VentanaPremioCarrera.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\VentanaPremioCarrera.Designer.cs">
+      <DependentUpon>VentanaPremioCarrera.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\VentanaPuertoEtapa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\VentanaPuertoEtapa.Designer.cs">
+      <DependentUpon>VentanaPuertoEtapa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\VentanaCarrera.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\VentanaCarrera.Designer.cs">
+      <DependentUpon>VentanaCarrera.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\VentanaCiclista.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\VentanaCiclista.Designer.cs">
+      <DependentUpon>VentanaCiclista.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\VentanaCiclistaEquipo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\VentanaCiclistaEquipo.Designer.cs">
+      <DependentUpon>VentanaCiclistaEquipo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\VentanaDirector.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\VentanaDirector.Designer.cs">
+      <DependentUpon>VentanaDirector.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\VentanaDirectorEquipo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\VentanaDirectorEquipo.Designer.cs">
+      <DependentUpon>VentanaDirectorEquipo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\VentanaEquipo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\VentanaEquipo.Designer.cs">
+      <DependentUpon>VentanaEquipo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\VentanaEtapa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\VentanaEtapa.Designer.cs">
+      <DependentUpon>VentanaEtapa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\VentanaPuerto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\VentanaPuerto.Designer.cs">
+      <DependentUpon>VentanaPuerto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\VentanaResultadoEtapa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\VentanaResultadoEtapa.Designer.cs">
+      <DependentUpon>VentanaResultadoEtapa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\VentanaTipoEtapa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\VentanaTipoEtapa.Designer.cs">
+      <DependentUpon>VentanaTipoEtapa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\VentanaCategoriaCarrera.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\VentanaCategoriaCarrera.Designer.cs">
+      <DependentUpon>VentanaCategoriaCarrera.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\VentanaCategoriaEquipo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\VentanaCategoriaEquipo.Designer.cs">
+      <DependentUpon>VentanaCategoriaEquipo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\VentanaCategoriaPuerto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\VentanaCategoriaPuerto.Designer.cs">
+      <DependentUpon>VentanaCategoriaPuerto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\VentanaPais.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\VentanaPais.Designer.cs">
+      <DependentUpon>VentanaPais.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\VentanaPremio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\VentanaPremio.Designer.cs">
+      <DependentUpon>VentanaPremio.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Vista\VentanaCategoriaEquipoEquipo.resx">
+      <DependentUpon>VentanaCategoriaEquipoEquipo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\VentanaPremioCarrera.resx">
+      <DependentUpon>VentanaPremioCarrera.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\VentanaPuertoEtapa.resx">
+      <DependentUpon>VentanaPuertoEtapa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\VentanaCarrera.resx">
+      <DependentUpon>VentanaCarrera.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\VentanaCiclista.resx">
+      <DependentUpon>VentanaCiclista.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\VentanaCiclistaEquipo.resx">
+      <DependentUpon>VentanaCiclistaEquipo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\VentanaDirector.resx">
+      <DependentUpon>VentanaDirector.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\VentanaDirectorEquipo.resx">
+      <DependentUpon>VentanaDirectorEquipo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\VentanaEquipo.resx">
+      <DependentUpon>VentanaEquipo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\VentanaEtapa.resx">
+      <DependentUpon>VentanaEtapa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\VentanaPuerto.resx">
+      <DependentUpon>VentanaPuerto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\VentanaResultadoEtapa.resx">
+      <DependentUpon>VentanaResultadoEtapa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\VentanaTipoEtapa.resx">
+      <DependentUpon>VentanaTipoEtapa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\VentanaCategoriaCarrera.resx">
+      <DependentUpon>VentanaCategoriaCarrera.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\VentanaCategoriaEquipo.resx">
+      <DependentUpon>VentanaCategoriaEquipo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\VentanaCategoriaPuerto.resx">
+      <DependentUpon>VentanaCategoriaPuerto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\VentanaPais.resx">
+      <DependentUpon>VentanaPais.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\VentanaPremio.resx">
+      <DependentUpon>VentanaPremio.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
